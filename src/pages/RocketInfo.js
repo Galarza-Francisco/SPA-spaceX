@@ -2,12 +2,12 @@ import getHash from "../utils/getHash";
 import getData from "../utils/getData";
 
 const RocketInfo = async () => {
-  const id = getHash().split("/")[2]; // Extraer el ID del hash
-  console.log("id: ", getHash());
+  const id = getHash().split("/")[2];
   const rockets = await getData();
 
+  // Buscar el cohete con el ID 
   const rocket = rockets.find(
-    (rocket) => rocket.flight_number === parseInt(id)
+    (rocket) => rocket.id === id
   );
 
   if (!rocket) {
@@ -16,7 +16,7 @@ const RocketInfo = async () => {
   }
 
   const view = `
-       <div class="Rockets-inner">
+<div class="Rockets-inner">
     <article class="Rockets-card">
         <img src="${rocket.links.patch.small}" alt="${rocket.name}">
         <h3>Fallas: <span>${rocket.failures.length}</span></h3>
@@ -27,9 +27,7 @@ const RocketInfo = async () => {
         <h3>Fecha y hora de despegue: <span>${rocket.date_utc}</span></h3>
     </article>
 </div>
-
-
-    `;
+  `;
   return view;
 };
 
