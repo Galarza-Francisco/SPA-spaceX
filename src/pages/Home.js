@@ -1,5 +1,4 @@
 import getData from "../utils/getData";
-import getHash from "../utils/getHash";
 const Home = async () => {
   const rockets = await getData();
 

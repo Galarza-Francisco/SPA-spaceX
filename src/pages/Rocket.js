@@ -2,8 +2,6 @@ import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 const Rocket = async () => {
     const id = getHash();
-    console.log('ID del cohete:', id);
-
     const rockets = await getData();
     const rocket = rockets.find(rocket => rocket.id === id);
 

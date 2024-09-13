@@ -61,7 +61,7 @@ h1, h2, h3 {
 
 .Rocket-card h2 {
   font-size: 1.5rem;
-  color: #3ccb41;
+  color: #005288;
   margin-top: 10px;
 }
 
@@ -96,7 +96,7 @@ h1, h2, h3 {
 }
 
 .Rockets-card h3 {
-  color: #3ccb41;
+  color: #005288  ;
   margin: 10px 0;
 }
 
@@ -140,7 +140,7 @@ h1, h2, h3 {
 }
 
 .Header-nav a {
-  color:  #3ccb41;
+  color:  #005288;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
@@ -151,6 +151,6 @@ h1, h2, h3 {
 }
 
 .Header-nav a:hover {
-  border-bottom: 2px solid  #3ccb41; 
+  border-bottom: 2px solid  #005288; 
   color: #fff; 
 }
