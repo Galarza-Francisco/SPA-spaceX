@@ -8,19 +8,23 @@ const router = async () => {
     const content = document.getElementById('content');
     header.innerHTML = await Header();
 
-    // trae la ruta 
     const route = getHash();
 
-   // busca la ruta que coincide
-const rutasCoinciden = Object.keys(routes).find(r => {
-    const partesRuta = route.split('/');
-    const idRuta = r.split('/');
-    return partesRuta.length === idRuta.length &&
-        idRuta.every((part, i) => part === partesRuta[i] || part.startsWith(':'));
-});
+    // Busca la ruta que coincide en el objeto de rutas(routes.js)
+    // Object.keys(routes) trae las rutas definidas en el objeto routes.js y el find busca la primer ruta que coincida con la ruta actual
+    const rutasCoinciden = Object.keys(routes).find(r => {
+        // trae la ruta por id y la ruta que estan definidas
+        const ruta = route.split('/');
+        const idRuta = r.split('/');
 
-content.innerHTML = await (routes[rutasCoinciden] || Error404)();
+        // Verifica que las dos rutas coincidan, despues compara cada parte de las dos rutas y que tambien coincidan.
+        return ruta.length === idRuta.length &&
+            idRuta.every((part, i) => part === ruta[i] || part.startsWith(':'));
+    });
 
+    // inserta el contenido de la ruta que encuentra, sino da el error 404
+    content.innerHTML = await (routes[rutasCoinciden] || Error404)();
 };
+
 
 export default router;
