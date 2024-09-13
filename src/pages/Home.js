@@ -1,7 +1,7 @@
 import getData from "../utils/getData";
 import getHash from "../utils/getHash";
 const Home = async () => {
-  const rockets = await getData(); // Asegúrate de que getData es una función
+  const rockets = await getData();
 
   const view = `
        <div class="Rockets">

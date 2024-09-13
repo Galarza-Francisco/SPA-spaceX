@@ -1,14 +1,14 @@
-/* Estilos generales */
+
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 20;
   padding: 0;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #202124; /* Fondo oscuro moderno */
-  color: #fff; /* Texto blanco */
+  background-color: #202124; 
+  color: #fff; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,6 @@ h1, h2, h3 {
   margin: 20px;
 }
 
-/* Estilos de la lista de cohetes */
 .Rockets {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -33,13 +32,14 @@ h1, h2, h3 {
   padding: 20px;
 }
 
-.Rocket-item {
-  list-style: none;
-  text-align: center;
+.Rocket-item a {
+  text-decoration: none; 
+  color: #ffffff; 
+  transition: color 0.3s ease; 
 }
 
 .Rocket-card {
-  background-color: #2b2f33; /* Color de fondo oscuro */
+  background-color: #2b2f33;
   border-radius: 15px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -47,25 +47,24 @@ h1, h2, h3 {
 }
 
 .Rocket-card:hover {
-  transform: scale(1.05); /* Efecto de hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .Rocket-card img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  margin-bottom: 15px;
+
   transition: transform 0.3s ease;
 }
 
 .Rocket-card h2 {
   font-size: 1.5rem;
-  color: #9aecf6; /* Color azul brillante */
+  color: #3ccb41;
   margin-top: 10px;
 }
 
-/* Estilos para el detalle del cohete */
 .Rockets-inner {
   display: flex;
   justify-content: center;
@@ -97,16 +96,16 @@ h1, h2, h3 {
 }
 
 .Rockets-card h3 {
-  color: #9aecf6;
+  color: #3ccb41;
   margin: 10px 0;
 }
 
 .Rockets-card h3 span {
-  color: #fff; /* Texto en blanco */
+  color: #fff; 
   font-weight: bold;
 }
 
-/* Estilos para hacer el contenido responsivo */
+
 @media (max-width: 768px) {
   .Rockets {
       grid-template-columns: 1fr;
@@ -116,39 +115,42 @@ h1, h2, h3 {
       width: 100%;
   }
 }
-/* Estilos del Header */
+
+/* header */
 .Header-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #1b1e22; /* Fondo oscuro */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
-  position: sticky;
+  padding: 10px;
+  background-color: #1b1e22; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 80%;
   top: 0;
   z-index: 1000;
 }
 
 .Header-logo img {
-  width: 150px; /* Tamaño ajustado del logo */
+  width: 150px;
   transition: transform 0.3s ease;
 }
 
 .Header-logo img:hover {
-  transform: scale(1.1); /* Efecto hover para agrandar ligeramente el logo */
+  transform: scale(1.1);
 }
 
 .Header-nav a {
-  color: #9aecf6; /* Color azul brillante para el enlace */
+  color:  #3ccb41;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px 20px;
   border: 2px solid transparent;
   transition: all 0.3s ease;
+  
 }
 
 .Header-nav a:hover {
-  border-bottom: 2px solid #9aecf6; /* Línea inferior en hover */
-  color: #fff; /* Color del texto al pasar el cursor */
+  border-bottom: 2px solid  #3ccb41; 
+  color: #fff; 
 }

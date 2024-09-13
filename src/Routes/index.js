@@ -1,7 +1,4 @@
 import Header from '../templates/Header';
-import Home from '../pages/Home.js';
-import Rocket from '../pages/Rocket';
-import RocketInfo from '../pages/RocketInfo';
 import Error404 from '../pages/error404.js'
 import getHash from '../utils/getHash';
 import resolveRoutes from '../utils/getResolveRoutes';

@@ -1,4 +1,4 @@
-// getData.js
+
 const API = 'https://api.spacexdata.com/v5/launches';
 
 const getData = async () => {
@@ -11,7 +11,7 @@ const getData = async () => {
         return data;
     } catch (error) {
         console.error('Fetch Error..!!', error);
-        return []; // Return an empty array in case of error
+        return []; 
     }
 };
 
