@@ -1,0 +1,154 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #202124; /* Fondo oscuro moderno */
+  color: #fff; /* Texto blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.Main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+/* Estilos de la lista de cohetes */
+.Rockets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.Rocket-item {
+  list-style: none;
+  text-align: center;
+}
+
+.Rocket-card {
+  background-color: #2b2f33; /* Color de fondo oscuro */
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Rocket-card:hover {
+  transform: scale(1.05); /* Efecto de hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.Rocket-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.Rocket-card h2 {
+  font-size: 1.5rem;
+  color: #9aecf6; /* Color azul brillante */
+  margin-top: 10px;
+}
+
+/* Estilos para el detalle del cohete */
+.Rockets-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Rockets-card {
+  background-color: #2b2f33;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.Rockets-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.Rockets-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.Rockets-card h3 {
+  color: #9aecf6;
+  margin: 10px 0;
+}
+
+.Rockets-card h3 span {
+  color: #fff; /* Texto en blanco */
+  font-weight: bold;
+}
+
+/* Estilos para hacer el contenido responsivo */
+@media (max-width: 768px) {
+  .Rockets {
+      grid-template-columns: 1fr;
+  }
+
+  .Rockets-card {
+      width: 100%;
+  }
+}
+/* Estilos del Header */
+.Header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1b1e22; /* Fondo oscuro */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.Header-logo img {
+  width: 150px; /* Tamaño ajustado del logo */
+  transition: transform 0.3s ease;
+}
+
+.Header-logo img:hover {
+  transform: scale(1.1); /* Efecto hover para agrandar ligeramente el logo */
+}
+
+.Header-nav a {
+  color: #9aecf6; /* Color azul brillante para el enlace */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.Header-nav a:hover {
+  border-bottom: 2px solid #9aecf6; /* Línea inferior en hover */
+  color: #fff; /* Color del texto al pasar el cursor */
+}
